@@ -20,9 +20,6 @@ def go(seen, adj, cur):
         for n in adj[cur]:
             go(seen, adj, n)
 
-def solve(inp):
-    pass
-
 adj = construct(inp)
 seen = set()
 total = 0
