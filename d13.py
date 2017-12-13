@@ -12,8 +12,10 @@ def solve(inp):
         mx = max(mx, n)
         a.append((n, r))
 
+    ranges = [0] * (mx + 1)
     period = [0] * (mx + 1)
     for b in a:
+        ranges[b[0]] = b[1]
         period[b[0]] = 2 * b[1] - 2
 
     res = 1
