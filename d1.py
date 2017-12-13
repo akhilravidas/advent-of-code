@@ -1,6 +1,6 @@
 from base import *
 
-inp = read_strings().strip()
+inp = read_string().strip()
 
 def solve(inp):
     s = 0

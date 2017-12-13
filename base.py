@@ -1,4 +1,5 @@
 from db import *
+from trees import *
 from collections import defaultdict
 from copy import deepcopy
 
@@ -13,7 +14,6 @@ read_int_2d = lambda: _reader(lambda f: [map(int, s.split()) for s in f.readline
 read_int_vertical = lambda: _reader(lambda f: map(int, f.readlines()))
 read_int_horizontal = lambda: _reader(lambda f: map(int, f.read().strip().  split()))
 read_words = lambda: _reader(lambda f: map(lambda x: x.split(), f.readlines()))
-read_strings = lambda: _reader(lambda f: f.read().strip())
 read_lines = lambda: _reader(lambda f: f.readlines())
 
 # returns g, x, y, st: x * b + y * n = g
@@ -47,5 +47,8 @@ def d_find_val_all(d, reqd):
 
 def d_find_val(d, reqd):
     return d_find_val_all(d, reqd)[0]
+
+def map_strip(arr):
+    return map(lambda x: x.strip(), arr)
 
 clone = deepcopy
