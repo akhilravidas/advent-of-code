@@ -1,7 +1,6 @@
 from base import *
 from d10 import knot_hash
 
-# inp = read_string()
 inp = "nbysizxe"
 
 def go(grid, r, c, seen):
@@ -17,8 +16,7 @@ def go(grid, r, c, seen):
     if grid[r][c] == '0':
         return
 
-    dirs = [(-1, 0), (1, 0), (0, -1), (0, 1)]
-    for d in dirs:
+    for d in dir_4:
         go(grid, r + d[0], c + d[1], seen)
 
 def solve(inp):
@@ -33,14 +31,9 @@ def solve(inp):
         row = inp + '-' + str(i)
         k = knot_hash(row)
         # convert to binary
-        for c in k:
-            res += to_bin(c)
-
+        res = ''.join(map(to_bin, k))
         grid.append(res)
-
-        for c in res:
-            if c == '1':
-                cnt += 1
+        cnt += sum(int(c) for c in res)
 
     seen = set()
     components = 0
@@ -50,7 +43,7 @@ def solve(inp):
                 components += 1
                 go(grid, i, j, seen)
 
-    print components
+    print 'Components:', components
 
     return cnt
 

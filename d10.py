@@ -38,12 +38,8 @@ def solve(cur_pos, skip_len, arr, inp):
 
 def p(inp):
     ans = [0] * (len(inp) / 16)
-    # print inp
     for i in range(0, len(inp)):
         ans[i/16] = ans[i/16] ^ inp[i]
-
-    # print ans
-
     return ''.join(
         map(lambda x: '%02x' % x, ans)
     )
@@ -58,7 +54,7 @@ def knot_hash(new_inp):
 
 
 new_inp = read_string()
-knot_hash(new_inp)
+print knot_hash(new_inp)
 
 
 # print p(inp)
