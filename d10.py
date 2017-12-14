@@ -36,28 +36,32 @@ def solve(cur_pos, skip_len, arr, inp):
 
 # get the sequence
 
-c = s = 0
-inp = range(0, 256)
-new_inp = read_string()
-lens = map(ord, new_inp) + [17, 31, 73, 47, 23]
-for rep in range(0, 64):
-    c, s, inp = solve(c, s, inp, lens)
-
-
 def p(inp):
     ans = [0] * (len(inp) / 16)
-    print inp
+    # print inp
     for i in range(0, len(inp)):
         ans[i/16] = ans[i/16] ^ inp[i]
 
-    print ans
+    # print ans
 
     return ''.join(
         map(lambda x: '%02x' % x, ans)
     )
 
+def knot_hash(new_inp):
+    c = s = 0
+    inp = range(0, 256)
+    lens = map(ord, new_inp) + [17, 31, 73, 47, 23]
+    for rep in range(0, 64):
+        c, s, inp = solve(c, s, inp, lens)
+    return p(inp)
 
-print p(inp)
+
+new_inp = read_string()
+knot_hash(new_inp)
+
+
+# print p(inp)
 
 # print solve(0, 0, range(0, 256), lens)
 # print solve(range(0, 5), [3, 4, 1, 5])
