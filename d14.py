@@ -44,7 +44,6 @@ def solve(inp):
                 go(grid, i, j, seen)
 
     print 'Components:', components
-
     return cnt
 
 

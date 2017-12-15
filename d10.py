@@ -53,8 +53,9 @@ def knot_hash(new_inp):
     return p(inp)
 
 
-new_inp = read_string()
-print knot_hash(new_inp)
+if __name__ == "__main__":
+    new_inp = read_string()
+    print knot_hash(new_inp)
 
 
 # print p(inp)

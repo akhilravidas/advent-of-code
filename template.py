@@ -5,4 +5,5 @@ inp = read_lines()
 def solve(inp):
     pass
 
-print solve(inp)
+if __name__ == "__main__":
+    print solve(inp)
