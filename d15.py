@@ -24,7 +24,6 @@ def solve():
     b = 299
     a_f = 16807
     b_f = 48271
-    res = 0
     times = 5 * (10 ** 6)
     a_seq = generate_seq(a, a_f, 4)
     b_seq = generate_seq(b, b_f, 8)
