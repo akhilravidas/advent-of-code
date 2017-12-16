@@ -1,6 +1,5 @@
 from base import *
 
-
 mask = (2 ** 16) - 1
 
 def cmp(a, b):

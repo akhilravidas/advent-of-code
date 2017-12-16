@@ -2,6 +2,7 @@ from db import *
 from trees import *
 from collections import defaultdict
 from copy import deepcopy
+import time
 
 
 # Input routines
