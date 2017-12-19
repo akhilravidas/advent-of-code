@@ -57,3 +57,6 @@ clone = deepcopy
 # Grids
 dir_4 = [(-1, 0), (0, -1), (1, 0), (0, 1)]
 dir_8 = [(dr, dc) for dr in range(-1, 2) for dc in range(-1, 2) if dr != 0 or dc != 0]
+
+import sys
+sys.setrecursionlimit(1000000000)
