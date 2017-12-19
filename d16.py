@@ -54,7 +54,6 @@ def brute_force(instructions, num_times):
 def encode(ans):
     return ''.join(chr(c + ord('a')) for c in ans)
 
-
 def find_full_cycle(instructions):
     step = 0
     d = {}
