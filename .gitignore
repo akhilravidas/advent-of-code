@@ -1,3 +1,5 @@
 db.py
 .vscode
 notes.txt
+*.ex
+*.in
