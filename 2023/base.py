@@ -1,4 +1,6 @@
 #!/usr/bin/env python
 import sys
+from collections import defaultdict
 
-inp = open(sys.argv[1]).read().strip().split("\n")
+with open(sys.argv[1]) as fp:
+    inp = fp.read().strip().split("\n")
