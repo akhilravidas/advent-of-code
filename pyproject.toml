@@ -3,10 +3,11 @@ name = "advent-of-code"
 version = "0.1.0"
 description = ""
 authors = ["Akhil Ravidas <ar@mod0.ai>"]
-readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
+requests = "^2.31.0"
+python-dotenv = "^1.0.0"
 
 
 [build-system]

@@ -3,3 +3,4 @@ db.py
 notes.txt
 *.ex
 *.in
+.env
