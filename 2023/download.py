@@ -6,8 +6,6 @@ import requests
 from dotenv import load_dotenv
 
 load_dotenv()
-SESSION = os.environ["SESSION"]
-
 yr = 2023 if len(sys.argv) < 3 else sys.argv[2]
 day = sys.argv[1] if len(sys.argv) > 1 else int(input("Day: "))
 
@@ -15,7 +13,7 @@ day = sys.argv[1] if len(sys.argv) > 1 else int(input("Day: "))
 # Define the URL and headers for the request
 url = f"https://adventofcode.com/{yr}/day/{day}/input"
 headers = {
-    "Cookie": f"session={SESSION}",
+    "Cookie": f"session={os.environ['SESSION']}",
     "User-Agent": "src: https://github.com/akhilravidas/advent-of-code/blob/master/2023/download.py, reach me @ ar@mod0.ai",
 }
 
