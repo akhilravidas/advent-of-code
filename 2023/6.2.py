@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 import sys
 from collections import defaultdict
 
@@ -26,7 +27,6 @@ def solve(t, d):
     lo = int((t + 1) / 2)
     hi = t
     while lo < hi:
-        # print("l2", lo, hi)
         mid = int((lo + hi + 1) / 2)
         if mid * (t - mid) > d:
             lo = mid
